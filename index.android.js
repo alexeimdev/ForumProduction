@@ -22,10 +22,7 @@ export default class MyApp extends Component {
 
     render() {
         return (
-            <View>
-                {/* <Header /> */}
-                <Tabs />
-            </View>
+            <Stack />
         )
     }
 }
@@ -41,32 +38,36 @@ export const Tabs = TabNavigator({
     },
 })
 
+export const Stack = StackNavigator({
+    Tabs
+})
+
 /*
 class TabViewExample extends PureComponent {
-    state = {
-        index: 0,
-        routes: [
-            { key: 'ForumProduction', title: 'ForumProduction' }
-        ],
-    };
-    _handleIndexChange = index => this.setState({ index });
-    _renderHeader = props => <TabBar {...props} />;
-    _renderScene = SceneMap({
-        'ForumProduction': ForumProduction
+            state = {
+                index: 0,
+                routes: [
+                    { key: 'ForumProduction', title: 'ForumProduction' }
+                ],
+            };
+        _handleIndexChange = index => this.setState({index});
+_renderHeader = props => <TabBar {...props} />;
+_renderScene = SceneMap({
+            'ForumProduction': ForumProduction
     });
-
-    _onRequestChangeTab = index => this.setState({ index });
-
-    render() {
-        return (
-            <TabViewAnimated
-                style={styles.container}
-                navigationState={this.state}
-                renderScene={this._renderScene}
-                renderHeader={this._renderHeader}
-                onIndexChange={this._handleIndexChange}
-                onRequestChangeTab={this._onRequestChangeTab}
-            />
+ 
+_onRequestChangeTab = index => this.setState({index});
+    
+render() {
+return (
+    <TabViewAnimated
+            style={styles.container}
+            navigationState={this.state}
+            renderScene={this._renderScene}
+            renderHeader={this._renderHeader}
+            onIndexChange={this._handleIndexChange}
+            onRequestChangeTab={this._onRequestChangeTab}
+        />
         );
     }
 }
