@@ -7,7 +7,7 @@ import {
     ToastAndroid,
 } from 'react-native';
 
-const ForumProduction = () => {
+export default Test = () => {
     const buttonPressed = (pMethod, pData) => {
         getData(pMethod, pData)
     }
@@ -67,5 +67,3 @@ const styles = StyleSheet.create({
     btn: {
     }
 });
-
-export default ForumProduction

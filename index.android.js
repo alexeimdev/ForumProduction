@@ -3,14 +3,17 @@ import {
     AppRegistry,
     StyleSheet,
     View,
-    ScrollView,
-    Button,
-    ToastAndroid,
+    // ScrollView,
+    // Button,
+    // ToastAndroid,
 } from 'react-native';
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator, createStackNavigator } from 'react-navigation';
 
 // Screens:
-import ForumProduction from './src/screens/ForumProduction';
+import Test from './src/screens/Test';
+import Treated from './src/screens/Treated';
+import Requests from './src/screens/Requests';
+import Approved from './src/screens/Approved';
 
 // Components:
 import Header from './src/components/Header';
@@ -22,24 +25,35 @@ export default class MyApp extends Component {
 
     render() {
         return (
-            <Stack />
+            <StackNavigator />
         )
     }
 }
 
-export const Tabs = TabNavigator({
-    ForumProduction: {
-        screen: ForumProduction,
-        title: "Forum Production"
+export const TopTabNavigator = createMaterialTopTabNavigator({
+    Approved: {
+        screen: Approved,
+        title: "Approved"
     },
-    ForumProduction2: {
-        screen: ForumProduction,
-        title: "Forum Production 2"
+    Requests: {
+        screen: Requests,
+        title: "Requests"
     },
-})
+    Treated: {
+        screen: Treated,
+        title: "Treated"
+    },
+    // Test: {
+    //     screen: Test,
+    //     title: "Test"
+    // },
+}, {
+        initialRouteName: 'Treated',
+        animationEnabled: false,
+    })
 
-export const Stack = StackNavigator({
-    Tabs
+export const StackNavigator = createStackNavigator({
+    TopTabNavigator
 })
 
 /*
