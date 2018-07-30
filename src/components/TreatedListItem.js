@@ -1,10 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default TreatedListItem = (item, index) => {
+export default TreatedListItem = (props) => {
+    const { item, index } = props;
+    
     return (
-        <View key={index}>
+        <View style={styles.container} key={index}>
             <Text>{item.text}</Text>
-        </View>
-    )
+        </View>        
+    );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        //flex: 1,
+        borderWidth: 1
+    },
+});
