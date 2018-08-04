@@ -3,28 +3,28 @@ import { createBottomTabNavigator, createMaterialTopTabNavigator } from 'react-n
 import * as screens from '../constants/screens';
 
 // Screens:
-import Test from '../screens/Test';
-import Treated from '../screens/Treated';
-import Requests from '../screens/Requests';
-import Approved from '../screens/Approved';
+import TestScreen from '../screens/TestScreen';
+import TreatedScreen from '../screens/TreatedScreen';
+import RequestsScreen from '../screens/RequestsScreen';
+import ApprovedScreen from '../screens/ApprovedScreen';
 
 const routeConfigs = {
     Approved: {
-        screen: Approved,
+        screen: ApprovedScreen,
         title: screens.Approved
     },
     Requests: {
-        screen: Requests,
+        screen: RequestsScreen,
         title: screens.Requests
     },
     Treated: {
-        screen: Treated,
+        screen: TreatedScreen,
         title: screens.Treated
     },
-    Test: {
-        screen: Test,
-        title: screens.Test
-    },
+    // Test: {
+    //     screen: TestScreen,
+    //     title: screens.Test
+    // },
 }
 
 const tabNavigatorConfig = {

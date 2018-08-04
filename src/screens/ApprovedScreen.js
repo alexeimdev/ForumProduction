@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text } from 'react-native';  
 
-export default Requests = () => {
+export default ApprovedScreen = () => {
     return (
         <View>
-            <Text>Requests Screen</Text>
+            <Text>Approved Screen</Text>
         </View>
     )
 }

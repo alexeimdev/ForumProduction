@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StackNavigator from './navigation/StackNavigator';
+import TreatedStackNavigator from './navigation/TreatedStackNavigator';
 
 // Components:
 import Header from './components/Header';
@@ -11,7 +11,7 @@ export default class MyApp extends Component {
 
     render() {
         return (
-            <StackNavigator />
+            <TreatedStackNavigator />
         )
     }
 }

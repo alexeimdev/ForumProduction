@@ -7,7 +7,7 @@ import {
     ToastAndroid,
 } from 'react-native';
 
-export default Test = () => {
+export default TestScreen = () => {
     const buttonPressed = (pMethod, pData) => {
         getData(pMethod, pData)
     }
