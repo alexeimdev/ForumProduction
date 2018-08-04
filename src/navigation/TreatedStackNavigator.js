@@ -14,7 +14,7 @@ const routeConfigs = {
     TreatedDetails: {
         screen: TreatedDetailsScreen,
         navigationOptions: ({ navigation }) => ({
-            title: `${navigation.state.params.BG_BUG_ID}`,
+            title: `${navigation.state.params.BG_SUMMARY}`,
         }),
     },
 }
