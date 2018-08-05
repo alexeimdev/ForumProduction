@@ -5,25 +5,34 @@ import * as screens from '../constants/screens';
 // Screens:
 import TestScreen from '../screens/TestScreen';
 import TreatedScreen from '../screens/TreatedScreen';
+import TreatedStackNavigator from '../navigation/TreatedStackNavigator';
 import RequestsScreen from '../screens/RequestsScreen';
 import ApprovedScreen from '../screens/ApprovedScreen';
 
 const routeConfigs = {
     Approved: {
         screen: ApprovedScreen,
-        title: screens.Approved
+        navigationOptions: {
+            title: screens.ApprovedHeb
+        }
     },
     Requests: {
         screen: RequestsScreen,
-        title: screens.Requests
+        navigationOptions: {
+            title: screens.RequestsHeb
+        }
     },
     Treated: {
-        screen: TreatedScreen,
-        title: screens.Treated
+        screen: TreatedStackNavigator,
+        navigationOptions: {
+            title: screens.TreatedHeb
+        }
     },
     // Test: {
     //     screen: TestScreen,
-    //     title: screens.Test
+    //     navigationOptions: {
+    //         title: screens.TestHeb
+    //     }
     // },
 }
 

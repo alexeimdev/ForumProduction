@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { I18nManager } from 'react-native';
-import TreatedStackNavigator from './navigation/TreatedStackNavigator';
+import TreatedStackNavigator from './navigation/TabNavigator';
 
 // Components:
 import Header from './components/Header';
@@ -14,7 +14,7 @@ export default class MyApp extends Component {
 
     render() {
         return (
-            <TreatedStackNavigator />
+            <TabNavigator />
         )
     }
 }
